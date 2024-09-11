@@ -1,0 +1,85 @@
+@import './mixins.scss';
+
+.form-people-bg {
+  background-color: #203041;
+  padding: 30px 0;
+  @include respond-to(tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-people__box {
+    display: flex;
+    @include respond-to(mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .form-people__person {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      h1 {
+        @include fontRoboto (21px, 500, 28px);
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+
+        margin-bottom: 10px;
+        @include respond-to(tablet) {
+          @include fontRoboto (18px, 500, 28px);
+        }
+        @include respond-to(mobile) {
+          @include fontRoboto (21px, 500, 28px);
+        }
+      }
+      p {
+        height: 140px;
+        @include fontRoboto (14px, 400, 1.42857143);
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+  
+        margin-bottom: 10px;
+        @include respond-to(tablet) {
+          @include fontRoboto (12px, 400, 1.42857143);
+        }
+        @include respond-to(mobile) {
+          height: 80px;
+          @include fontRoboto (14px, 400, 1.42857143);
+        }
+      }
+      span {
+        @include fontRoboto (16px, bold, 30px);
+        color: #7ed321;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #1f2224;
+        width: 100%;
+
+        padding: 10px;
+        @include respond-to(tablet) {
+          padding: 8px;
+        }
+        
+        img {
+          display: block;
+          width: 40px;
+          height: 30px;
+          margin-bottom: 0;
+          margin-right: 10px;
+        }
+      }
+    }
+
+  }
+
+}

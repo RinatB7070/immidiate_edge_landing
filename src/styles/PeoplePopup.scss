@@ -1,0 +1,55 @@
+@import './mixins.scss';
+
+.peoplepopup__box {
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+
+  background-color: #203041;
+  border: 2px solid #7ed321;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+
+  width: 240px;
+  height: 70px;
+  bottom: 30px;
+  padding: 8px 10px;
+  opacity: 100%;
+
+  transition: opacity 0.15s linear;
+  .peoplepopup__content {
+    flex-grow: 1;
+    p {
+      @include fontRoboto(20px, normal, normal);
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    span {
+      @include fontRoboto(20px, bold, normal);
+      color:#7ed321;
+    }
+  }
+  .peoplepopup__imgbox {
+    position: relative;
+    .imgbox__flag {
+      position: absolute;
+      width: 25px;
+      height: 18px;
+      top: 15px;
+      left: -18px
+    }
+    .imgbox__person {
+      display: block;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+.close_popup {
+  display: none;
+}
+.transition_popup {
+  opacity: 0%;
+}

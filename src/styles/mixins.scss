@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url('../fonts/Segoe_UI/Segoe\ UI.ttf'),
+      url('../fonts/Segoe_UI/Segoe\ UI\ Bold.ttf'),
+      url('../fonts/Segoe_UI/Segoe\ UI\ Italic.ttf'),
+      url('../fonts/Segoe_UI/Segoe\ UI\ Bold\ Italic.ttf');
+  font-weight: normal;
+}
+
+$smallMobile: 480px;
+$mobile: 640px;
+$tablet: 960px;
+$desktop: 1280px;
+$video-form: 1070px;
+
+@mixin fontRoboto ($size, $weight, $height) {
+  font-family: "Roboto", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin fontSegoiUi ($size, $weight, $height){
+  font-family: "Segoi UI", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin respond-to($media) {
+  @if $media == small-mobile {
+    @media (max-width: $smallMobile) { @content; }
+  }
+  @else if $media == mobile {
+    @media (max-width: $mobile ) { @content; }
+  }
+  @else if $media == tablet {
+    @media (max-width: $tablet ){ @content; }
+  }
+  @else if $media == desktop {
+    @media (max-width: $desktop) { @content; }
+  }
+  @else if $media == video-form {
+    @media (max-width: $video-form) { @content; }
+  }
+}

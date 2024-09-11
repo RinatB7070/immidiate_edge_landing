@@ -1,0 +1,58 @@
+@import './mixins.scss';
+
+.form_box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 360px;
+
+  padding: 18px 20px;
+
+  @include respond-to(video-form) {
+    width: 360px;
+  }
+  img {
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+  }
+  h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    @include fontRoboto(21px, 300, 1.14);
+    color: #fff;
+  }
+  input {
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+  button {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 100%;
+    background-color: #7ed321;
+    border-radius: 24px;
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 500;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: Lato;
+    cursor: pointer;
+    &:hover {
+      background-color: #f89b08;
+    }
+  }
+}

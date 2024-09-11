@@ -1,0 +1,95 @@
+@import './mixins.scss';
+
+.footerform-bg {
+  background-image: url('../assets/footerform-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footerform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .footerform-logo {
+    display: block;
+    width: 150px;
+    height: 150px;
+  }
+  .footerform-header {
+    @include fontRoboto(30px, bold, 1.33);
+    color: #fff;
+    margin-bottom: 26px;
+  }
+  .footerform-form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    background-color: #7ed321;
+
+    padding: 30px 10px;
+    margin-bottom: 40px;
+    input {
+      box-sizing: border-box;
+      height: 50px;
+      width: 560px;
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      border-radius: 2px;
+      font-weight: 300;
+      margin-bottom: 15px;
+      @include respond-to(tablet) {
+        width: 460px;
+      }
+      @include respond-to(mobile) {
+        width: 300px;
+      }
+    }
+    button {
+      margin: 0 auto;
+      height: 50px;
+      width: 560px;
+      background-color: #2c80d9;
+      border-radius: 24px;
+      font-size: 21px;
+      line-height: 23px;
+      font-weight: 500;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+      color: #fff;
+      border: 1px solid #2c80d9;
+      font-family: Lato;
+      @include respond-to(tablet) {
+        width: 460px;
+      }
+      @include respond-to(mobile) {
+        width: 300px;
+      }
+    }
+  }
+  .footerform-logosbox {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    img {
+      max-width: 165px;
+      opacity: 50%;
+    }
+    @include respond-to(video-form) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+      justify-items: center
+    }
+    @include respond-to(mobile) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      justify-items: center
+    }
+  }
+}

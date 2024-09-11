@@ -1,0 +1,82 @@
+@import './mixins.scss';
+
+.advantages-bg {
+  background-image: url('../assets/card/bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.advantages__header {
+  @include fontRoboto(30px, bold, 1.33);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.advantages__subheader {
+  @include fontRoboto(24px, 300, normal);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.cards_box {
+  display: flex;
+  margin-bottom: 30px;
+  @include respond-to(mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #fff;
+    width: 360px;
+    margin: 0 15px;
+    padding: 35px 20px;
+
+    @include respond-to(tablet) {
+      margin: 0 10px;
+      padding: 15px 10px;
+    }
+    @include respond-to(mobile) {
+      margin-bottom: 30px;
+    }
+    .card__title {
+      @include fontRoboto(20px, normal, 1.1);
+      color: rgb(51, 51, 51);
+      text-align: center;
+
+      margin-top: 0;
+    }
+    .card__text {
+      @include fontRoboto(18px, 300, 24px);
+      color: #4f637c;
+      text-align: center;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .card__logo {
+      height: 56px;
+      width: 56px;
+    }
+  }
+
+}
+.advantages__coins {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.advantages__footer {
+  @include fontRoboto(36px, bold, 1.25);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  span {
+    color: #7ed321;
+  }
+  @include respond-to(mobile) {
+    @include fontRoboto(24px, bold, 1.33);
+  }
+}

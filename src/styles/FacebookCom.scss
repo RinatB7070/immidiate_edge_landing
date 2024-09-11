@@ -1,0 +1,80 @@
+@import './mixins.scss';
+.fb__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .fb__logo {
+    display: block;
+    height: 44px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  .fb__time {
+    @include fontRoboto(21px, 300, normal);
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+
+    width: 100%;
+    padding: 10px 0;
+  }
+  .fb__person{
+    display: flex;
+    width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    .fb__person__ava {
+      margin-right: 50px;
+      width: 128px;
+      height: 128px;
+    }
+    .fb__person__content {
+      h1 {
+        @include fontSegoiUi(21px, bold, normal);
+        color: #4267b2;
+        padding-bottom: 5px;
+      }
+      .fb__person__stars {
+        height: 15px;
+        padding-bottom: 10px;
+      }
+      p {
+        @include fontRoboto(16px, normal, normal);
+        color: #6d6d6d;
+        padding-bottom: 10px;
+      }
+      .fb__person__links {
+        display: flex;
+        .fb__person__links__like {
+          display: flex;
+          flex-direction: row;
+          @include fontRoboto (14px, normal, normal);
+          color: #4267b2;
+          margin-right: 20px;
+          text-decoration: none;
+          img {
+            display: block;
+            height: 16px;
+            width: 16px;
+          }
+        }
+        .fb__person__links__comment {
+          display: flex;
+          flex-direction: row;
+          @include fontRoboto (14px, normal, normal);
+          color: #4267b2;
+          margin-right: 15px;
+          text-decoration: none;
+          img {
+            display: block;
+            height: 16px;
+            width: 16px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

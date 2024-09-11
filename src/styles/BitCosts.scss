@@ -1,0 +1,49 @@
+@import './mixins.scss';
+
+.bit-costs-bg {
+  min-height: 800px;
+  background-image: url('../assets/device.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include respond-to(tablet) {
+    min-height: 600px;
+  }
+  @include respond-to(mobile) {
+    min-height: 300px;
+  }
+  .bit-costs {
+    padding: 150px 0;
+    @include respond-to(tablet) {
+      padding: 50px 0;
+    }
+    .bit-cost{
+      width: 210px;
+      height: 50px;
+      background: rgba(28, 91, 179, 0.4);
+      padding: 0px 10px;
+      margin-bottom: 5px;
+
+      display: flex;
+      align-items: center;
+
+      @include respond-to(tablet) {
+        padding: 0 5px;
+      }
+      @include respond-to(mobile) {
+        display: none;
+      }
+      .bit-cost__name {
+        display: block;
+        @include fontRoboto(15px, 300, normal);
+        color: #fff;
+        flex-grow: 1;
+      }
+      .bit-cost__amount {
+        @include fontRoboto(16px, 700, normal);
+        color: #ffd046;;
+        padding-right: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import './mixins.scss';
+@import './AppHeader.scss';
+@import './AppOffer.scss';
+@import './RunnungLine.scss';
+@import './RichPeople.scss';
+@import './BitCostsHeader.scss';
+@import './BitCosts.scss';
+@import './CTA.scss';
+@import './PeopleForm.scss';
+@import './AppForm.scss';
+@import './AppAdvantages.scss';
+@import './AnotherAdd.scss';
+@import './FacebookCom.scss';
+@import './FooterForm.scss';
+@import './AppFooter.scss';
+@import './PeoplePopup.scss';
+
+body {
+  margin: 0;
+}
+h1, ul, p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 26px 72px;
+  max-width: 1280px;
+  @include respond-to (desktop) {
+    padding: 26px 40px;
+  }
+  @include respond-to (tablet) {
+    padding: 26px 20px;
+  }
+  @include respond-to(mobile) {
+    padding: 18px 20px;
+    max-width: 640px;
+  }
+  
+}

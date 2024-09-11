@@ -1,0 +1,67 @@
+@import './mixins.scss';
+
+#CTA-box-margin {
+  margin-top: -130px;
+  @include respond-to(mobile) {
+    margin-top: -50px;
+  }
+}
+
+.CTA-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .CTA-btn {
+    display: flex;
+    align-items: center;
+    width: 690px;
+    padding: 10px 40px;
+    margin-bottom: 30px;
+
+    background-color: #7ed321;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    border: 1px solid #7ed321;
+    border-radius: 35px;
+
+    @include respond-to(tablet) {
+      width: 600px;
+      padding: 5px 30px;
+    }
+    @include respond-to(mobile) {
+      width: 500px;
+    }
+    .CTA-btn__text {
+      flex-grow: 1;
+      @include fontRoboto(30px, 700, 50px);
+      color: #fff;
+      @include respond-to(tablet) {
+        @include fontRoboto(26px, 700, 50px);
+      }
+      
+    }
+  }
+  h1 {
+    text-align: center;
+    @include fontRoboto(36px, 700, 1.25);
+    color: #4f637c;
+    margin-bottom: 15px;
+    @include respond-to(tablet) {
+      @include fontRoboto(30px, 700, 1.25);
+    }
+    @include respond-to(mobile) {
+      @include fontRoboto(26px, 700, 1.25);
+    }
+  }
+  p {
+    text-align: center;
+    @include fontRoboto(21px, 300, 1.25);
+    color: #4f637c;
+    @include respond-to(tablet) {
+      @include fontRoboto(16px, 300, 1.25);
+    }
+    @include respond-to(mobile) {
+      @include fontRoboto(14px, 300, 1.25);
+    }
+  }
+}

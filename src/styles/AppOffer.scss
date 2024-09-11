@@ -1,0 +1,65 @@
+@import './mixins.scss';
+
+
+.offer-bg {
+  background-image: url('../assets/offer-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#header-margin {
+  padding-top: 90px;
+}
+.offer {
+  .offer__header {
+    @include fontRoboto(30px, 700, 30px);
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+  .offer_videoform_box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    @include respond-to(video-form) {
+      flex-direction: column;
+      align-items: center;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      @include respond-to(video-form) {
+        margin-right: 0;
+      }
+    }
+  }
+  .offer__logos_box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    img {
+      max-width: 165px;
+    }
+    @include respond-to(video-form) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+      justify-items: center
+    }
+    @include respond-to(mobile) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      justify-items: center
+    }
+  }
+  h2 {
+    @include fontRoboto(20px, 500, 1.58);
+    text-align: center;
+    font-style: italic;
+    color: #fff;
+    margin: 0;
+  }
+}
